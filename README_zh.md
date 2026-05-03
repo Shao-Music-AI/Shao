@@ -49,6 +49,7 @@ Khala 的核心特点包括：
 
 - `[Coming Soon]` 对音乐人及小白友好的完整部署教程
 - `[Coming Soon]` 多机多卡部署推理兼容性
+- `[Coming Soon]` Discord 交流群
 
 ### 🖥️ 前端界面
 #### Prompt 模式

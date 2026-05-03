@@ -49,6 +49,7 @@ The core characteristics of Khala include:
 
 - `[Coming Soon]` A full deployment guide for musicians and beginner users.
 - `[Coming Soon]` Multi-node and multi-GPU inference deployment support.
+- `[Coming Soon]` Discord community server.
 
 ### 🖥️ Web UI
 #### Prompt Mode
