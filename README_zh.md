@@ -44,7 +44,7 @@ Khala 的核心特点包括：
 
 ## 📰 News
 
-- `⚠️ [2026-05-07]` 我们发现了一个可能显著影响推理质量的问题，目前怀疑与数值精度有关。该问题正在排查和修复中，在此通知移除前，请谨慎看待当前版本的生成质量。
+- `⚠️ [2026-06-16]` 当前推理质量对显卡架构、CUDA 栈、容器镜像以及 Megatron/TransformerEngine 版本高度敏感。经过反复测试，我们发现即使使用相同 prompt，并尽量保持 CUDA/container 配置一致，不同显卡类型之间也无法保证生成结果完全一致。目前最稳定、最可复现的结果来自严格遵循项目提供的 NGC-based 镜像与环境配置说明。尤其是在 H800 上，使用参考镜像可以得到与训练/推理环境一致的正常结果；在 RTX 4090 上，如果严格使用项目提供的环境，也可以正常生成。使用其他容器、CUDA/PyTorch/TransformerEngine 组合或 Megatron 版本，可能导致生成质量严重下降，甚至出现类似噪声的音频。我们保留此说明是为了透明地告知当前限制，也欢迎有经验的用户帮助我们继续定位底层数值与运行时差异。
 
 ### ✅ 已更新
 
@@ -236,5 +236,5 @@ Khala/
 欢迎扫码加入微信群交流项目进展、使用问题与后续更新：
 
 <div align="center">
-  <img src="./assets/wechat_group.jpg" width="320" alt="Khala WeChat Group QR Code" />
+  <img src="./assets/wechat_group.png" width="320" alt="Khala WeChat Group QR Code" />
 </div>

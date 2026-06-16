@@ -44,7 +44,7 @@ The core characteristics of Khala include:
 
 ## 📰 News
 
-- `⚠️ [2026-05-07]` We have identified a potential issue that may significantly affect inference quality. The problem is currently under investigation and may be related to numerical precision. Until this notice is removed, please treat current generation quality as unstable.
+- `⚠️ [2026-06-16]` Inference quality is highly sensitive to the GPU architecture, CUDA stack, container image, and Megatron/TransformerEngine versions. After repeated testing, we found that bit-identical generation across different GPU types is not guaranteed, even with the same prompt and similar CUDA/container settings. The best and most reproducible results are obtained by strictly following the provided NGC-based environment and setup instructions. In particular, the released pipeline has been verified to produce normal results on H800 with the reference image, and can also work on RTX 4090 when the provided environment is followed. Using other containers, CUDA/PyTorch/TransformerEngine combinations, or Megatron versions may lead to severely degraded output, including noise-like audio. We are keeping this notice here to be transparent about the current limitation, and we welcome help from experienced users who are willing to investigate the underlying numerical/runtime differences with us.
 
 ### ✅ Updated
 
@@ -235,5 +235,5 @@ The model weights are currently intended to be released under `CC BY-NC 4.0` (Cr
 Feel free to join the WeChat group for discussion, usage questions, and future updates:
 
 <div align="center">
-  <img src="./assets/wechat_group.jpg" width="320" alt="Khala WeChat Group QR Code" />
+  <img src="./assets/wechat_group.png" width="320" alt="Khala WeChat Group QR Code" />
 </div>
