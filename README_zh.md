@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="./assets/logo.png" width="280" alt="Khala Logo" />
+<img src="./assets/logo.png" width="280" alt="Shao Logo" />
 
-# 基于统一声学词元路线的高保真歌曲生成系统
+### Shao: 基于统一声学词元路线的高保真音乐生成系统
 
 [English](./README.md) | 中文
 
@@ -10,7 +10,7 @@
 
 <div align="center">
 
-<a href="https://khala-music-ai.github.io/Khala-demo/">
+<a href="https://shao-music-ai.github.io/Shao-demo/">
   <img alt="Demo" src="https://img.shields.io/badge/%F0%9F%8E%A7%20Demo-Online-brightgreen">
 </a>
 
@@ -30,13 +30,19 @@
 
 </div>
 
-## ✨ Khala 是什么？
+## ✨ Shao（韶元）是什么？
 
-Khala 是一个面向高保真歌曲生成的开源系统，支持基于文本描述与歌词条件生成完整歌曲。与依赖语义 token、扩散模型或多级音频生成模块的路线不同，Khala 采用统一的声学词元建模路线，在同一套离散音频表示空间中完成从粗粒度音乐结构到细粒度声学细节的生成。
+> **更名说明**
+>
+> 本项目原名为 **Khala**，现已正式更名为 **Shao（韶元）**。模型、代码库与研究方向保持不变；此次更名是为了统一项目在论文、GitHub、Demo 与后续发布中的长期身份。
+>
+> **Shao** 是中文名 **韶元** 的英文名称。“韶”本义与美好的音乐有关，也让人联想到古代雅乐与文化传承；“元”表示起点、基础与第一性原理。
 
-Khala 的核心特点包括：
+Shao（韶元）是一个面向高保真音乐生成的开源系统，支持基于文本描述与歌词条件生成完整音乐作品。与依赖语义 token、扩散模型或多级音频生成模块的路线不同，Shao 采用统一的声学词元建模路线，在同一套离散音频表示空间中完成从粗粒度音乐结构到细粒度声学细节的生成。
 
-- **完整歌曲生成**：面向歌曲级别的音乐生成，而不是短音频片段或伴奏循环。
+Shao（韶元）的核心特点包括：
+
+- **完整音乐生成**：面向作品级别的音乐生成，而不是短音频片段或伴奏循环。
 - **文本与歌词控制**：支持通过自然语言 prompt 和 lyrics 控制风格、情绪、演唱与内容。
 - **统一声学词元表示**：基于 64 层 RVQ acoustic token hierarchy，将音频表示为 coarse-to-fine 的离散声学词元。
 - **两阶段生成链路**：首先由 backbone 生成粗粒度 acoustic tokens，再由 super-resolution 模型补全高层 RVQ tokens，最后通过 decoder 还原为 waveform。
@@ -48,7 +54,7 @@ Khala 的核心特点包括：
 
 ### ✅ 已更新
 
-- `[2026-05-16]` 在线音频 Demo 页面已上线：[Khala Demo](https://khala-music-ai.github.io/Khala-demo/)
+- `[2026-05-16]` 在线音频 Demo 页面已上线：[Shao Demo](https://shao-music-ai.github.io/Shao-demo/)
 - `[2026-05-11]` 已支持默认单卡安全启动，并兼容通过同一后端脚本覆盖多卡与不同运行模式的部署推理配置。
 - `[2026-05-05]` arXiv 论文已上线：[Khala: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
 - `[2026-05-01]` 代码、环境配置文档与 Dockerfile 已整理完成。
@@ -60,13 +66,13 @@ Khala 的核心特点包括：
 
 ### 🖥️ 前端界面
 #### Prompt 模式
-![Khala Frontend Demo 1](./assets/front_1.png)
+![Shao Frontend Prompt Mode](./assets/front_prompt_mode.png)
 #### Tag 模式
-![Khala Frontend Demo 2](./assets/front_2.png)
+![Shao Frontend Tag Mode](./assets/front_tag_mode.png)
 
 ### 🎧 音频样例
 
-在线 Demo 页面已提供生成音频样例：[Khala Demo](https://khala-music-ai.github.io/Khala-demo/)
+在线 Demo 页面已提供生成音频样例：[Shao Demo](https://shao-music-ai.github.io/Shao-demo/)
 
 ## ✅ 运行要求
 
@@ -98,7 +104,7 @@ Khala 的核心特点包括：
 docker pull ghcr.io/davidliujiafeng/khala-env:ngc25.02-node24
 
 docker run --gpus all -it --rm \
-  --name khala \
+  --name shao \
   -p 30869:30869 \
   -p 8889:8889 \
   ghcr.io/davidliujiafeng/khala-env:ngc25.02-node24
@@ -109,8 +115,8 @@ docker run --gpus all -it --rm \
 进入容器后执行：
 ```bash
 cd /workspace
-git clone https://github.com/Khala-Music-AI/Khala.git
-cd Khala
+git clone https://github.com/Shao-Music-AI/Shao.git
+cd Shao
 ```
 
 ### 3. 下载模型权重
@@ -131,7 +137,7 @@ hf download liujiafeng/Khala-MusicGeneration-v1.0 --local-dir checkpoints
 ### 4. 启动后端
 
 ```bash
-cd /workspace/Khala/backend
+cd /workspace/Shao/backend
 bash run_backend.sh
 ```
 
@@ -142,7 +148,7 @@ bash run_backend.sh
 在另一个终端中执行：
 
 ```bash
-cd /workspace/Khala/frontend
+cd /workspace/Shao/frontend
 npm install
 npm run dev
 ```
@@ -177,7 +183,7 @@ flowchart LR
 
 ## 🔗 相关资源
 
-- Demo 页面：[Khala Demo](https://khala-music-ai.github.io/Khala-demo/)
+- Demo 页面：[Shao Demo](https://shao-music-ai.github.io/Shao-demo/)
 - arXiv 论文：[Khala: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
 - 模型权重：https://huggingface.co/liujiafeng/Khala-MusicGeneration-v1.0
 - 环境配置：[ENVIRONMENT_SETUP_zh.md](./ENVIRONMENT_SETUP_zh.md)
@@ -186,7 +192,7 @@ flowchart LR
 ## 🗂 仓库结构
 
 ```text
-Khala/
+Shao/
 ├── backend/
 ├── frontend/
 ├── core/
@@ -236,5 +242,5 @@ Khala/
 欢迎扫码加入微信群交流项目进展、使用问题与后续更新：
 
 <div align="center">
-  <img src="./assets/wechat_group.png" width="320" alt="Khala WeChat Group QR Code" />
+  <img src="./assets/wechat_group.png" width="320" alt="Shao WeChat Group QR Code" />
 </div>

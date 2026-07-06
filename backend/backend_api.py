@@ -48,7 +48,7 @@ def parse_args():
 
 
 # ============================================================
-# Lyrics cleaning (from khala/backend/clean_lyrics_rules.py)
+# Lyrics cleaning rules.
 # ============================================================
 
 _REPLACEMENTS = {

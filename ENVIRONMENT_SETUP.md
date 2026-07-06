@@ -29,9 +29,9 @@ The project code can be placed anywhere. All paths below are described relative 
 For example:
 
 ```bash
-git clone https://github.com/Khala-Music-AI/Khala.git
+git clone https://github.com/Shao-Music-AI/Shao.git
 
-cd Khala
+cd Shao
 ```
 
 The rest of this document assumes repository-relative paths rather than any fixed host-machine directory.
@@ -126,7 +126,7 @@ The current code resolves tokenizer files, decoder configuration, and checkpoint
 Make sure the directory structure looks like this:
 
 ```text
-Khala/
+Shao/
 ├── backend/
 ├── frontend/
 ├── core/
@@ -182,7 +182,7 @@ If you want to mount a host-side project directory into the container, you can u
 
 ```bash
 docker run -d \
-  --name khala_dev \
+  --name shao_dev \
   --gpus all \
   -p 2222:22 \
   -p 30869:30869 \

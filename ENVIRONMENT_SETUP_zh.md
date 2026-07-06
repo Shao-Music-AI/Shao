@@ -29,9 +29,9 @@
 例如：
 
 ```bash
-git clone https://github.com/Khala-Music-AI/Khala.git
+git clone https://github.com/Shao-Music-AI/Shao.git
 
-cd Khala
+cd Shao
 ```
 
 后续文档中的路径均默认相对于仓库根目录，而不是固定写死某个宿主机目录。
@@ -126,7 +126,7 @@ npm run dev
 请确保目录结构如下：
 
 ```text
-Khala/
+Shao/
 ├── backend/
 ├── frontend/
 ├── core/
@@ -182,7 +182,7 @@ npm run dev
 
 ```bash
 docker run -d \
-  --name khala_dev \
+  --name shao_dev \
   --gpus all \
   -p 2222:22 \
   -p 30869:30869 \

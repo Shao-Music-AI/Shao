@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="./assets/logo.png" width="280" alt="Khala Logo" />
+<img src="./assets/logo.png" width="280" alt="Shao Logo" />
 
-# High-Fidelity Song Generation With a Unified Acoustic-Token Pipeline
+### Shao: High-Fidelity Music Generation With a Unified Acoustic-Token Pipeline
 
 English | [中文](./README_zh.md)
 
@@ -10,7 +10,7 @@ English | [中文](./README_zh.md)
 
 <div align="center">
 
-<a href="https://khala-music-ai.github.io/Khala-demo/">
+<a href="https://shao-music-ai.github.io/Shao-demo/">
   <img alt="Demo" src="https://img.shields.io/badge/%F0%9F%8E%A7%20Demo-Online-brightgreen">
 </a>
 
@@ -30,13 +30,19 @@ English | [中文](./README_zh.md)
 
 </div>
 
-## ✨ What Is Khala?
+## ✨ What Is Shao?
 
-Khala is an open-source system for high-fidelity song generation, capable of generating complete songs from text descriptions and lyric conditions. Unlike approaches built around semantic tokens, diffusion models, or multi-stage audio generation stacks, Khala follows a unified acoustic-token route and generates both coarse musical structure and fine acoustic detail within the same discrete audio representation space.
+> **Rename Notice**
+>
+> This project was formerly known as **Khala** and has been officially renamed to **Shao**. The model, codebase, and research direction remain unchanged; the rename is intended to unify the project's long-term identity across papers, GitHub, demos, and future releases.
+>
+> **Shao** is the English name of **韶元**. "韶" is associated with beautiful music and also evokes classical court music and cultural continuity, while "元" refers to origin, foundation, and first principle.
 
-The core characteristics of Khala include:
+Shao is an open-source system for high-fidelity music generation, capable of generating complete musical works from text descriptions and lyric conditions. Unlike approaches built around semantic tokens, diffusion models, or multi-stage audio generation stacks, Shao follows a unified acoustic-token route and generates both coarse musical structure and fine acoustic detail within the same discrete audio representation space.
 
-- **Full-song generation**: designed for complete song generation rather than short clips or loop-style accompaniment.
+The core characteristics of Shao include:
+
+- **Full-length music generation**: designed for complete musical works rather than short clips or loop-style accompaniment.
 - **Text and lyric control**: supports natural-language prompts and lyrics to control style, mood, vocals, and content.
 - **Unified acoustic-token representation**: built on a 64-layer RVQ acoustic token hierarchy that represents audio as coarse-to-fine discrete acoustic tokens.
 - **Two-stage generation pipeline**: a backbone first generates coarse acoustic tokens, then a super-resolution model completes higher RVQ token layers, and finally a decoder reconstructs the waveform.
@@ -48,7 +54,7 @@ The core characteristics of Khala include:
 
 ### ✅ Updated
 
-- `[2026-05-16]` The online audio demo page is now available: [Khala Demo](https://khala-music-ai.github.io/Khala-demo/)
+- `[2026-05-16]` The online audio demo page is now available: [Shao Demo](https://shao-music-ai.github.io/Shao-demo/)
 - `[2026-05-11]` Backend inference launch now supports single-GPU safe startup by default, plus multi-GPU and runtime-mode overrides for deployment compatibility.
 - `[2026-05-05]` The arXiv paper is now available: [Khala: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
 - `[2026-05-01]` The codebase, environment documentation, and Dockerfile have been cleaned up for release.
@@ -60,13 +66,13 @@ The core characteristics of Khala include:
 
 ### 🖥️ Web UI
 #### Prompt Mode
-![Khala Frontend Demo 1](./assets/front_1.png)
+![Shao Frontend Prompt Mode](./assets/front_prompt_mode.png)
 #### Tag Mode
-![Khala Frontend Demo 2](./assets/front_2.png)
+![Shao Frontend Tag Mode](./assets/front_tag_mode.png)
 
 ### 🎧 Audio Samples
 
-Listen to generated samples on the online demo page: [Khala Demo](https://khala-music-ai.github.io/Khala-demo/)
+Listen to generated samples on the online demo page: [Shao Demo](https://shao-music-ai.github.io/Shao-demo/)
 
 ## ✅ Runtime Requirements
 
@@ -98,7 +104,7 @@ The currently available prebuilt image is:
 docker pull ghcr.io/davidliujiafeng/khala-env:ngc25.02-node24
 
 docker run --gpus all -it --rm \
-  --name khala \
+  --name shao \
   -p 30869:30869 \
   -p 8889:8889 \
   ghcr.io/davidliujiafeng/khala-env:ngc25.02-node24
@@ -109,8 +115,8 @@ docker run --gpus all -it --rm \
 After entering the container, run:
 ```bash
 cd /workspace
-git clone https://github.com/Khala-Music-AI/Khala.git
-cd Khala
+git clone https://github.com/Shao-Music-AI/Shao.git
+cd Shao
 ```
 
 ### 3. Download the model checkpoints
@@ -131,7 +137,7 @@ This command downloads the model repository contents into the local `checkpoints
 ### 4. Start the backend
 
 ```bash
-cd /workspace/Khala/backend
+cd /workspace/Shao/backend
 bash run_backend.sh
 ```
 
@@ -142,7 +148,7 @@ The default launcher now starts in a single-GPU safe mode. Advanced users can al
 In another terminal, run:
 
 ```bash
-cd /workspace/Khala/frontend
+cd /workspace/Shao/frontend
 npm install
 npm run dev
 ```
@@ -177,7 +183,7 @@ flowchart LR
 
 ## 🔗 Project Resources
 
-- Demo page: [Khala Demo](https://khala-music-ai.github.io/Khala-demo/)
+- Demo page: [Shao Demo](https://shao-music-ai.github.io/Shao-demo/)
 - arXiv paper: [Khala: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
 - Model weights: https://huggingface.co/liujiafeng/Khala-MusicGeneration-v1.0
 - Environment setup: [ENVIRONMENT_SETUP.md](./ENVIRONMENT_SETUP.md)
@@ -186,7 +192,7 @@ flowchart LR
 ## 🗂 Repository Structure
 
 ```text
-Khala/
+Shao/
 ├── backend/
 ├── frontend/
 ├── core/
@@ -235,5 +241,5 @@ The model weights are currently intended to be released under `CC BY-NC 4.0` (Cr
 Feel free to join the WeChat group for discussion, usage questions, and future updates:
 
 <div align="center">
-  <img src="./assets/wechat_group.png" width="320" alt="Khala WeChat Group QR Code" />
+  <img src="./assets/wechat_group.png" width="320" alt="Shao WeChat Group QR Code" />
 </div>

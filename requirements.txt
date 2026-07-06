@@ -1,4 +1,4 @@
-# Runtime Python dependencies for Khala-Music-Generation.
+# Runtime Python dependencies for Shao.
 #
 # Notes:
 # - This file is intended for the current inference stack, not Megatron training.

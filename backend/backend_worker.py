@@ -1340,7 +1340,7 @@ def run_generation_one_shot(request: GenerateRequest) -> dict:
         set_status("busy")
         set_phase("loading_backbone", 0, "")
 
-        with tempfile.TemporaryDirectory(prefix="khala_worker_", dir=BACKEND_DIR) as temp_dir:
+        with tempfile.TemporaryDirectory(prefix="shao_worker_", dir=BACKEND_DIR) as temp_dir:
             request_path = os.path.join(temp_dir, "request.json")
             paths = one_shot_stage_paths(temp_dir)
 

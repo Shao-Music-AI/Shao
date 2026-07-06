@@ -1997,7 +1997,7 @@ Revolution lives where the soul is found`);
               <div className="flex flex-wrap items-center gap-2 md:gap-3">
                 <div className="text-lg font-semibold tracking-[-0.025em] md:text-[22px]">
                   <span className="bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">
-                    Khala
+                    Shao
                   </span>
                 </div>
                 <div className="hidden h-5 w-px bg-white/12 md:block" />
