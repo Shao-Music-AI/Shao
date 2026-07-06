@@ -18,7 +18,7 @@ English | [中文](./README_zh.md)
   <img alt="Paper" src="https://img.shields.io/badge/%F0%9F%93%84%20Paper-arXiv-b31b1b">
 </a>
 
-<a href="https://huggingface.co/liujiafeng/Khala-MusicGeneration-v1.0">
+<a href="https://huggingface.co/liujiafeng/Shao-MusicGeneration-v1.0">
   <img alt="Model Weights" src="https://img.shields.io/badge/%F0%9F%A4%97%20Model-Hugging%20Face-ffc107">
 </a>
 <a href="./ENVIRONMENT_SETUP.md">
@@ -123,13 +123,13 @@ cd Shao
 
 Model repository:
 
-- [Hugging Face: liujiafeng/Khala-MusicGeneration-v1.0](https://huggingface.co/liujiafeng/Khala-MusicGeneration-v1.0)
+- [Hugging Face: liujiafeng/Shao-MusicGeneration-v1.0](https://huggingface.co/liujiafeng/Shao-MusicGeneration-v1.0)
 
 From the repository root, run:
 
 ```bash
 mkdir -p checkpoints
-hf download liujiafeng/Khala-MusicGeneration-v1.0 --local-dir checkpoints
+hf download liujiafeng/Shao-MusicGeneration-v1.0 --local-dir checkpoints
 ```
 
 This command downloads the model repository contents into the local `checkpoints/` directory.
@@ -185,7 +185,7 @@ flowchart LR
 
 - Demo page: [Shao Demo](https://shao-music-ai.github.io/Shao-demo/)
 - arXiv paper: [Khala: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
-- Model weights: https://huggingface.co/liujiafeng/Khala-MusicGeneration-v1.0
+- Model weights: https://huggingface.co/liujiafeng/Shao-MusicGeneration-v1.0
 - Environment setup: [ENVIRONMENT_SETUP.md](./ENVIRONMENT_SETUP.md)
 - Backend docs: [backend/README_backend.md](./backend/README_backend.md)
 
