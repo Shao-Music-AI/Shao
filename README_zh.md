@@ -56,7 +56,7 @@ Shao（韶元）的核心特点包括：
 
 - `[2026-05-16]` 在线音频 Demo 页面已上线：[Shao Demo](https://shao-music-ai.github.io/Shao-demo/)
 - `[2026-05-11]` 已支持默认单卡安全启动，并兼容通过同一后端脚本覆盖多卡与不同运行模式的部署推理配置。
-- `[2026-05-05]` arXiv 论文已上线：[Khala: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
+- `[2026-05-05]` arXiv 论文已上线：[Shao: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
 - `[2026-05-01]` 代码、环境配置文档与 Dockerfile 已整理完成。
 
 ### ⏳ TODOs
@@ -184,7 +184,7 @@ flowchart LR
 ## 🔗 相关资源
 
 - Demo 页面：[Shao Demo](https://shao-music-ai.github.io/Shao-demo/)
-- arXiv 论文：[Khala: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
+- arXiv 论文：[Shao: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
 - 模型权重：https://huggingface.co/liujiafeng/Shao-MusicGeneration-v1.0
 - 环境配置：[ENVIRONMENT_SETUP_zh.md](./ENVIRONMENT_SETUP_zh.md)
 - 后端说明：[backend/README_backend_zh.md](./backend/README_backend_zh.md)
@@ -219,7 +219,7 @@ Shao/
 
 如果本项目对你的研究或开发有帮助，欢迎引用我们的论文：
 
-- [Khala: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
+- [Shao: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
 
 正式 BibTeX 信息将在后续补充到论文页面与仓库文档中。
 

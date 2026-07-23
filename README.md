@@ -56,7 +56,7 @@ The core characteristics of Shao include:
 
 - `[2026-05-16]` The online audio demo page is now available: [Shao Demo](https://shao-music-ai.github.io/Shao-demo/)
 - `[2026-05-11]` Backend inference launch now supports single-GPU safe startup by default, plus multi-GPU and runtime-mode overrides for deployment compatibility.
-- `[2026-05-05]` The arXiv paper is now available: [Khala: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
+- `[2026-05-05]` The arXiv paper is now available: [Shao: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
 - `[2026-05-01]` The codebase, environment documentation, and Dockerfile have been cleaned up for release.
 
 ### ⏳ TODOs
@@ -184,7 +184,7 @@ flowchart LR
 ## 🔗 Project Resources
 
 - Demo page: [Shao Demo](https://shao-music-ai.github.io/Shao-demo/)
-- arXiv paper: [Khala: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
+- arXiv paper: [Shao: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
 - Model weights: https://huggingface.co/liujiafeng/Shao-MusicGeneration-v1.0
 - Environment setup: [ENVIRONMENT_SETUP.md](./ENVIRONMENT_SETUP.md)
 - Backend docs: [backend/README_backend.md](./backend/README_backend.md)
@@ -218,7 +218,7 @@ Main directories:
 
 If this project is helpful to your research or development work, you are welcome to cite our paper:
 
-- [Khala: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
+- [Shao: Scaling Acoustic Token Language Models Toward High-Fidelity Music Generation](https://arxiv.org/abs/2605.01790)
 
 The final BibTeX information will be added later to both the paper page and the repository documentation.
 
